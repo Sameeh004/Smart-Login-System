@@ -1,0 +1,36 @@
+@font-face {
+    font-family:font;
+    src: url(../TikTok_Sans/static/TikTokSans-Regular.ttf);
+}
+
+
+body {
+    background-color: #24353F;
+    font-family: font;
+}
+
+h1 {
+    color: #17A2B8;
+    font-weight: 500;
+}
+
+.form {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    background-color: #24353F;
+    width: 65%;
+}
+
+input#signupName::placeholder,input#signupEmail::placeholder,input#signupPassword::placeholder{
+    color: #b6b6b6;
+}
+.form-control:focus
+{
+    box-shadow: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}

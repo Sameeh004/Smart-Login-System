@@ -79,9 +79,7 @@ var baseURL = ''
 for (var i = 0; i < pathparts.length - 1; i++) {
     baseURL += '/' + pathparts[i]
 }
-// console.log(location.href);
-// console.log(pathparts);
-// console.log(baseURL);
+
 
 
 
@@ -100,14 +98,10 @@ function Login() {
 
         if (userData[i].email.toLowerCase() == email.toLowerCase() && userData[i].password.toLowerCase() == password.toLowerCase()) {
             localStorage.setItem('sessionUsername', userData[i].name)
-            // document.getElementById('incorrect').innerHTML = '<span class="p-2 text-success">correct</span>'
-            if (baseURL == '/') {
-                location.replace('https://' + location.hostname + '/home.html')
+            document.getElementById('incorrect').innerHTML = '<span class="p-2 text-success">correct</span>'
+            var base = location.origin + location.pathname.substring(0, location.pathname.lastIndexOf('/'));
 
-            } else {
-                location.replace(baseURL + '/home.html')
-
-            }
+            location.replace(base + '/home.html');
         }
         else {
             document.getElementById('incorrect').innerHTML = '<span class="p-2 text-danger">incorrect email or password</span>'
@@ -121,4 +115,3 @@ function logout() {
 }
 
 
-console.log(location.hostname , location);

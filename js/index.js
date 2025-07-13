@@ -100,7 +100,6 @@ function Login() {
             localStorage.setItem('sessionUsername', userData[i].name)
             document.getElementById('incorrect').innerHTML = '<span class="p-2 text-success">correct</span>'
             var base = location.origin + location.pathname.substring(0, location.pathname.lastIndexOf('/'));
-
             location.replace(base + '/home.html');
         }
         else {
